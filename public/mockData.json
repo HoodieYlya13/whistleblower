@@ -1,0 +1,20 @@
+[
+    {
+      "companyName": "EcoCorp",
+      "username": "ecocorp_user",
+      "email": "contact@ecocorp.com",
+      "password": "ecocorp123"
+    },
+    {
+      "companyName": "GreenTech",
+      "username": "greentech_user",
+      "email": "info@greentech.com",
+      "password": "greentech123"
+    },
+    {
+      "companyName": "SustainCo",
+      "username": "sustainco_user",
+      "email": "support@sustainco.com",
+      "password": "sustainco123"
+    }
+  ]

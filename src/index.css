@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+:root {
+  --primary-color: #4FBC46;
+  --secondary-color: #003838;
+  --tertiary-color: #7A7A7A;
+  --neutral-color: #FBFBFB;
+  --primary-light-color: #98E3CD87;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 3px solid var(--neutral-color);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--neutral-color);
+  font-family: 'Istok Web', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  justify-content: center;
+}
+
+.loginButton {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+@layer utilities {
+  .trapezoid {
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+  }
+
+  .parallelogram {
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  }
 }
