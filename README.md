@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# WhistleBlower 🌿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.14-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-4.4.7-FF6384?style=flat-square&logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
+[![License](https://img.shields.io/badge/License-Academic-blue?style=flat-square)](LICENSE)
 
-## Available Scripts
+> **WhistleBlower** is a premium, full-stack ecological monitoring and data visualization platform designed to help modern industries audit their energy footprints, track monthly greenhouse gas emissions, and execute data-backed transitions toward environmental sustainability.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌎 Cross-Continental Academic Collaboration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project was built as a high-stakes, collaborative 4th-year engineering school project. It was developed in partnership with an **American Business & Project Management School**, combining international technical development with cross-cultural product leadership.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The Dynamics of our Collaboration:
+* **The American Team (Chief Project Officers & Product Owners):** Acted as the CPOs, Product Owners, and Project Managers. They established the business requirements, designed the functional backlog, defined user personas, analyzed compliance models, and set the strategic product direction.
+* **The Engineering Team (Technical Developers):** Designed, implemented, and deployed the full-stack architecture (React frontend + PHP API backend) ensuring high performance, responsive aesthetics, and robust file parsing pipelines that fulfilled the CPOs' exact business vision.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Core Features
 
-### `npm run build`
+* 🔐 **Secure Corporate Authentication & Registration:** Streamlined onboarding for enterprise clients. Companies register with precise parameters (name, location, sector, selected operational plan, and billing options) and login securely.
+* 📂 **Smart Excel Spreadsheet Parsing (`.xlsx`/`.xls`):** Powered by `react-dropzone`. Corporate users drag and drop their raw monthly energy logging spreadsheets directly into the dashboard.
+* 📊 **Dynamic Visualizations (Consumption vs. Emissions):** Beautiful interactive charts powered by `Chart.js` and `react-chartjs-2`. Allows real-time toggling between:
+  * **Consumptions (kWh):** Month-by-month electricity and heating consumption logs.
+  * **Emissions (g CO₂):** Calculated environmental impact translated into greenhouse gas equivalence.
+* 🎨 **Bespoke, Responsive UX/UI:** Designed with custom Tailwind CSS values and styled-geometry layouts:
+  * Sleek geometric designs including custom **trapezoid** and **parallelogram** clip-path masks.
+  * Curated CSS color tokens matching an ecological and industrial aesthetic.
+  * Customized, fluid scrollbars for consistent branding across browsers.
+* 📬 **Interactive Communications Engine:** FAQ dropdown interface with dynamic transitions and a contact request form supporting local and global inquiry routing.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Technology Stack & Architecture
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The **WhistleBlower** ecosystem is split into a modern decoupled architecture:
 
-### `npm run eject`
+### Frontend Layer
+* **Core Library:** React 18 (using modern hooks like `useState`, `useEffect`, `useRef`)
+* **Routing:** React Router v7 (`react-router-dom` for client-side navigation)
+* **Styling & UI Engine:** Tailwind CSS v3 & PostCSS for a responsive, utility-first UI
+* **Spreadsheet Dropzone:** `react-dropzone` for dragging, dropping, and parsing validation
+* **Data Visualization:** Chart.js, `react-chartjs-2`, and ApexCharts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Backend Integration Layer (PHP API)
+The React client communicates with a robust backend service designed to parse data structures, perform emission-factor multiplications based on regions, and manage data persistency:
+* **Authentication API:** `POST /api/login` & `POST /api/entreprises`
+* **Parsing Engine API:** `POST /api/upload` (accepts `.xlsx`/`.xls` uploads, processes rows, and outputs monthly aggregates for consumptions and emissions)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 Design Tokens & Aesthetic System
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application uses custom-curated design variables defined in `src/index.css` and bound to Tailwind's configuration:
 
-## Learn More
+| Variable | Color Token | Visual Purpose |
+| :--- | :--- | :--- |
+| `--primary-color` | `#4FBC46` (Emerald Green) | Call-to-actions, successes, and brand highlights |
+| `--secondary-color` | `#003838` (Deep Forest Teal) | High-contrast headers, dark elements, and primary text |
+| `--tertiary-color` | `#7A7A7A` (Muted Slate Grey) | Body text, explanations, and secondary details |
+| `--neutral-color` | `#FBFBFB` (Off-White) | Clean card backgrounds and scroll tracks |
+| `--primary-light-color` | `#98E3CD87` (Soft Mint Green tint) | Hero section backgrounds and highlight cards |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Getting Started
 
-### Code Splitting
+To run the React frontend locally on your machine, follow these instructions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed (v18+ recommended) along with standard package managers like `npm` or `bun`.
 
-### Analyzing the Bundle Size
+### 1. Clone the Repository
+```bash
+git clone https://github.com/HoodieYlya13/whistleblower.git
+cd whistleblower
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2. Install Dependencies
+Install all required UI and utility packages:
+```bash
+npm install
+# or if you use bun
+bun install
+```
 
-### Making a Progressive Web App
+### 3. Run the Development Server
+```bash
+npm start
+# or if you use bun
+bun dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the application in your browser. The page will hot-reload dynamically when changes are made.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 4. Build for Production
+To bundle and optimize the application for production hosting (Vercel, Netlify, or static server):
+```bash
+npm run build
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📂 Project Structure
 
-### Deployment
+```text
+whistleblower/
+├── public/                 # Static assets (images, icons, etc.)
+└── src/
+    ├── components/         # Reusable React UI Components
+    │   ├── utils/          # Mock data structures and helpers
+    │   │   └── utils.js
+    │   ├── Dashboard.css   # Dashboard layout overrides
+    │   ├── Dashboard.jsx   # Ecological dashboard & Chart UI
+    │   ├── Footer.jsx      # Dynamic site footer with social mappings
+    │   ├── Home.jsx        # Landing page with CTA, FAQ accordion, & contact form
+    │   ├── LoginPage.css   # Authentication styles
+    │   ├── LoginPage.jsx   # Enterprise Login & Registration flows
+    │   └── Navbar.jsx      # Navigation bar with responsive mobile drawer
+    ├── App.js              # Client-side router layout
+    ├── index.css           # Base Tailwind directives & custom CSS tokens
+    └── index.js            # React DOM mounting & entry point
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🤝 Project Credits & Partners
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This platform was developed as part of a joint collaborative curiculum in 4th year:
+* **Engineering & Architecture:** Developed by the engineering students.
+* **Product Management & Product Ownership:** Led and defined by the American school CPOs.

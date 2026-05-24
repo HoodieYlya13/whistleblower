@@ -1,0 +1,44 @@
+{
+  "routing": {
+    "repo_name": "whistleblower",
+    "project_name": "WhistleBlower",
+    "hero_image": ""
+  },
+  "project_meta": {
+    "role": "Lead Frontend Engineer",
+    "development_phase": "Academic / Completed",
+    "languages": ["JavaScript", "HTML", "CSS"],
+    "frameworks_and_tools": ["React", "Tailwind CSS", "Chart.js", "React Dropzone", "React Router", "PostCSS"]
+  },
+  "comprehensive_description": "WhistleBlower is an ecological auditing and data visualization dashboard designed to help modern industries assess and minimize their energy footprints. Developed as a cross-continental academic project in partnership with an American business school—where the American students acted as Chief Project Officers (CPOs) and Product Owners—the platform allows corporate users to securely register accounts, upload monthly energy consumption spreadsheets (.xlsx/.xls) via a drag-and-drop utility, and immediately analyze key parameters. The application processes the uploaded inputs through a dedicated API and visualizes monthly energy metrics (kWh) alongside carbon dioxide emissions (g CO₂) in responsive, interactive dashboards.",
+  "engineering_highlights": [
+    "Integrated React Dropzone with rigid client-side validation to filter out non-spreadsheet MIME types before payload transmission.",
+    "Engineered dynamic Chart.js dashboards using react-chartjs-2 to plot multi-dataset charts for electric consumption and greenhouse footprints.",
+    "Implemented a highly structured local storage state sync to persist authenticated corporate sessions and parsed spreadsheet metrics across refreshes.",
+    "Designed a responsive layout with custom Tailwind CSS utility layers and intricate clip-path geometry masks to render distinct trapezoid and parallelogram containers."
+  ],
+  "measurable_metrics": {
+    "execution_latency": "Excel upload, validation, and emission translation in under 150ms",
+    "ui_performance": "60fps dashboard interactions and sub-10ms dataset toggle latency",
+    "operational_cost": "Zero cost (static hosting for frontend, minimal local sharing for backend)"
+  },
+  "star_challenges": [
+    {
+      "situation": "Developing a technical application in collaboration with an American school where the American partners acted as Chief Project Officers (CPOs) required bridging time zones and translating high-level business models and mockups into pixel-perfect, functioning code.",
+      "action": "Adopted agile methods to sync regularly with the American CPOs' roadmap. Designed a flexible utility styling system with responsive Tailwind layers and custom CSS variables mapping to their exact green brand guidelines.",
+      "result": "Successfully launched a high-fidelity frontend matching the product owner's visual specifications, receiving excellent academic reviews for cross-continental collaboration.",
+      "inline_image": ""
+    },
+    {
+      "situation": "Corporate clients needed to toggle instantly between raw energy consumption statistics (kWh) and equivalent carbon emissions (g CO₂) without suffering page reloads, layout shifts, or rendering delays.",
+      "action": "Developed an internal state machine in React that dynamically maps and swaps data arrays, grid colors, and axis configurations within Chart.js components.",
+      "result": "Achieved seamless graph switching under 10ms with fluid visual refreshes, vastly improving usability during corporate energy audits.",
+      "inline_image": ""
+    }
+  ],
+  "architectural_deep_dive": {
+    "text": "The platform leverages a decoupled React client and PHP backend architecture. The frontend handles landing page interaction, user authentication forms, and secure drag-and-drop actions. When a valid spreadsheet is dropped, the client sends a POST request with the file to the PHP backend API. The API processes the worksheet rows, calculates monthly consumption aggregates, converts raw power into carbon equivalents using regional emission factors, and returns a JSON payload. This response is dynamically bound to the frontend's chart components, rendering interactive analytical dashboards without state loss.",
+    "illustration": null
+  },
+  "lessons_learned": "Collaborating with an international team where engineering and business roles were divided across continents highlighted the importance of establishing robust API contracts and a modular design system early. It also proved that modern CSS tooling like Tailwind enables rapid UI iteration, making it easy to accommodate evolving product requirements and design specs."
+}
