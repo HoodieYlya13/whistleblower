@@ -42,3 +42,4 @@
   },
   "lessons_learned": "Collaborating with an international team where engineering and business roles were divided across continents highlighted the importance of establishing robust API contracts and a modular design system early. It also proved that modern CSS tooling like Tailwind enables rapid UI iteration, making it easy to accommodate evolving product requirements and design specs."
 }
+
